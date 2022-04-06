@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.nav`
   width: 250px;
-  height: 100vh;
+  height: calc(100vh - 30px);
   padding: 15px 0;
   background-image: linear-gradient(to bottom, #0F131B, #3B4F6F);
   transition: 0.3s;
