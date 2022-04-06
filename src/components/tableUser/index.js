@@ -1,6 +1,15 @@
+import { useNavigate } from "react-router-dom";
+import { randomUserService } from "../../services";
 import { Image, Table, Td, Th, Tr } from "./styled";
 
 export function TableUser({ users }) {
+
+  const navigate = useNavigate();
+
+  const userDetails = (user) => {
+    randomUserService.save(user);
+    navigate('/details');
+  } 
 
   return(
     <Table> 
@@ -12,7 +21,7 @@ export function TableUser({ users }) {
       </Tr>
 
       { users.map(user => 
-          <Tr>
+          <Tr onClick={() => userDetails(user)}>
           <Td> <Image src={user.picture.thumbnail} /></Td>
             <Td> {`${user.name.first} ${user.name.last}` }  </Td>
             <Td> {user.email} </Td>
