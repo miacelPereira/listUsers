@@ -7,12 +7,12 @@ export const Table = styled.table`
   border: 1px solid #E7E9EB;
   border-radius: 10px;
   background-color: #FFFFFF;
+  
 `;
 
 export const Tr = styled.tr`
   width: 100px;
-  height: 60px;
-  border: 1px solid red;
+  /* height: 60px; */
   cursor: pointer;
   &:nth-child(even) {
     background-color: #F0F1F2;
@@ -21,6 +21,7 @@ export const Tr = styled.tr`
 
 export const Th = styled.th`
   padding: 10px;
+  height: 50px;
   cursor: auto;
 `;
 

@@ -1,9 +1,8 @@
-import { Container, ContainerList } from "./styled";
-import { Sidebar } from "../../layouts"
-import { TableUser } from "../../components/tableUser";
 import { useEffect, useState } from "react";
+import { Container, ContainerList } from "./styled";
 import { randomUserService } from "../../services";
-import { HeaderPage } from "../../components";
+import { HeaderPage, TableUser } from "../../components";
+import { Sidebar } from "../../layouts";
 
 export function ListUsers () {
 
