@@ -5,13 +5,13 @@ export const Container = styled.div`
   height: 85vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 `;
 
 export const Image = styled.img`
   width: 150px;
   height: 150px;
+  margin-top: 60px;
   border-radius: 50%;
   border: 5px solid #cfcfcf;
 `;

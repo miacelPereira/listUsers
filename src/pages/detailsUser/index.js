@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Field, InfoUser } from "../../components";
+import { Field, InfoUser, HeaderPage } from "../../components";
 import { Sidebar } from "../../layouts";
 import { randomUserService } from "../../services";
-import { Container, ContainerDetails, ContainerLabelText, Detail, Header } from "./styled";
+import { Container, ContainerDetails, ContainerLabelText, Detail } from "./styled";
 
 export function DetailsUser() {
 
@@ -20,7 +20,7 @@ export function DetailsUser() {
     <Container>
       <Sidebar />
       <ContainerDetails>
-        <Header> Detalhes </Header>
+        <HeaderPage page="Detalhes" />
         <Detail>
           <InfoUser user={user} />
           <ContainerLabelText>

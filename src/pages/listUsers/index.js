@@ -1,8 +1,9 @@
-import { Container, ContainerList, Header } from "./styled";
+import { Container, ContainerList } from "./styled";
 import { Sidebar } from "../../layouts"
 import { TableUser } from "../../components/tableUser";
 import { useEffect, useState } from "react";
 import { randomUserService } from "../../services";
+import { HeaderPage } from "../../components";
 
 export function ListUsers () {
 
@@ -21,7 +22,7 @@ export function ListUsers () {
     <Container>
       <Sidebar />
       <ContainerList>
-        <Header> Usuários </Header>
+        <HeaderPage page="Usuários" />
         <TableUser users={users}/>
       </ContainerList>
     </Container>
