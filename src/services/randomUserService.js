@@ -11,8 +11,6 @@ export const randomUserService = {
   getUser: async () => {
     const userStorage = localStorage.getItem('colab.user');
     
-    console.log({ userStorage })
-
     if (userStorage) return JSON.parse(userStorage);
 
     const { data } = await axios.get('https://randomuser.me/api');
