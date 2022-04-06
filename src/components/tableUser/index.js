@@ -3,7 +3,7 @@ import { Image, Table, Td, Th, Tr } from "./styled";
 export function TableUser({ users }) {
 
   return(
-    <Table>
+    <Table> 
       <Tr>
         <Th> Foto </Th>
         <Th> Nome </Th>
@@ -11,48 +11,15 @@ export function TableUser({ users }) {
         <Th> Telefone </Th>
       </Tr>
 
-      <Tr>
-        <Td> <Image src="https://us.123rf.com/450wm/apoev/apoev1901/apoev190100092/126178797-person-gray-photo-placeholder-woman-in-costume-on-gray-background.jpg" /></Td>
-        <Td> Nome </Td>
-        <Td> E-mail </Td>
-        <Td> Telefone </Td>
-      </Tr>
-      <Tr>
-        <Td> Foto </Td>
-        <Td> Nome </Td>
-        <Td> E-mail </Td>
-        <Td> Telefone </Td>
-      </Tr>
-      <Tr>
-        <Td> Foto </Td>
-        <Td> Nome </Td>
-        <Td> E-mail </Td>
-        <Td> Telefone </Td>
-      </Tr>
-      <Tr>
-        <Td> Foto </Td>
-        <Td> Nome </Td>
-        <Td> E-mail </Td>
-        <Td> Telefone </Td>
-      </Tr>
-      <Tr>
-        <Td> Foto </Td>
-        <Td> Nome </Td>
-        <Td> E-mail </Td>
-        <Td> Telefone </Td>
-      </Tr>
-      <Tr>
-        <Td> Foto </Td>
-        <Td> Nome </Td>
-        <Td> E-mail </Td>
-        <Td> Telefone </Td>
-      </Tr>
-      <Tr>
-        <Td> Foto </Td>
-        <Td> Nome </Td>
-        <Td> E-mail </Td>
-        <Td> Telefone </Td>
-      </Tr>
+      { users.map(user => 
+          <Tr>
+          <Td> <Image src={user.picture.thumbnail} /></Td>
+            <Td> {`${user.name.first} ${user.name.last}` }  </Td>
+            <Td> {user.email} </Td>
+            <Td> {user.phone} </Td>
+          </Tr>
+        )
+      }
     </Table>
   );
 }

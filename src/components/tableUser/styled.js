@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Table = styled.table`
   width: 90%;
-  height: 85%;
+  height: 80vh;
   margin: auto;
   border: 1px solid #E7E9EB;
   border-radius: 10px;
@@ -13,6 +13,7 @@ export const Tr = styled.tr`
   width: 100px;
   height: 60px;
   border: 1px solid red;
+  cursor: pointer;
   &:nth-child(even) {
     background-color: #F0F1F2;
   }
@@ -20,9 +21,10 @@ export const Tr = styled.tr`
 
 export const Th = styled.th`
   padding: 10px;
+  cursor: auto;
 `;
 
-export const Td = styled.th`
+export const Td = styled.td`
   padding: 10px;
 `;
 
